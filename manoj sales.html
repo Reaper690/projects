@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manoj Sales - Furniture Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            background: #35424a;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .featured {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .featured img, .product img {
+            width: 200px;
+            height: auto;
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            background: #ffffff;
+            text-align: center;
+        }
+
+        footer {
+            background: #35424a;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Manoj Sales</h1>
+        <p>Your one-stop shop for quality furniture in Chapra, Bihar</p>
+        <div class="currency-selector">
+            <label for="currency">Choose Currency:</label>
+            <select id="currency">
+                <option value="INR">Indian Rupees (₹)</option>
+            </select>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h2>Featured Furniture</h2>
+            <div class="featured">
+                <img src="sofa.jpeg" alt="Sofa">
+                <img src="table.jpeg" alt="Dining Table">
+                <img src="chair.jpeg" alt="Chair">
+            </div>
+        </section>
+
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="product">
+                <img src="sofa.jpeg" alt="Sofa">
+                <h3>Comfortable Sofa</h3>
+                <p>Price: ₹20,000</p>
+            </div>
+            <div class="product">
+                <img src="table.jpeg" alt="Dining Table">
+                <h3>Elegant Dining Table</h3>
+                <p>Price: ₹15,000</p>
+            </div>
+            <div class="product">
+                <img src="chair.jpeg" alt="Chair">
+                <h3>Stylish Chair</h3>
+                <p>Price: ₹5,000</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: info@manojsales.com</p>
+            <p>Phone: +91 12345 67890</p>
+            <p>Address: Chapra, Bihar, India</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Manoj Sales. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currencySelector = document.getElementById('currency');
+
+            currencySelector.addEventListener('change', function() {
+                const selectedCurrency = currencySelector.value;
+                alert(`You have selected: ${selectedCurrency}`);
+                // Here you can add more functionality to convert prices if needed
+            });
+        });
+    </script>
+</body>
+</html>
